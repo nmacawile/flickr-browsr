@@ -1,0 +1,8 @@
+<% if flash.any? %>
+  <% flash.each do |k, v| %>
+    <%= content_tag :div, v, class: ["alert", "alert-#{k}"] %>
+  <% end %>
+<% end %>
+
+<%= render "carousel" if @photos && @photos.any? %>
+

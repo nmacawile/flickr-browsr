@@ -1,0 +1,14 @@
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="<%= root_path %>">flickr.browsr</a>
+    </div>
+    <%= form_tag root_url, method: :get, enforce_utf8: false, authenticity_token: false, class: ["navbar-form", "navbar-right"] do %>
+      <div class="form-group">
+        <%= text_field_tag :user, params[:user], class: [ "form-control", "form-control-lg" ], placeholder: "Flickr id or username" %>
+        <%= submit_tag "Go", name: nil, class: [ "btn", "btn-primary" ] %>
+      </div>
+    <% end %>
+  </div>
+</nav>
+    

@@ -1,0 +1,15 @@
+<div class="carousel">
+  <div class="user-link">
+    <h4>Photos by <a href="<%= @person.get_info!.profile_url %>" target="_blank"><%= @person.username %></a></h4>  
+  </div>
+  <div id="myCarousel" class="carousel slide row" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <%= render "carousel_inner" %>
+    
+    <!-- Thumbnails -->
+    <%= render "carousel_thumbnails" %>
+  </div>
+
+<div class="row photos-pagination">
+  <%= will_paginate @photos %>
+</div>

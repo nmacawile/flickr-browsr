@@ -1,0 +1,13 @@
+<div id="slider-thumbs" class="col-md-12">
+  <ul class="list-inline">
+    <% n = 0 %>
+    <% @photos.each do |photo| %>
+      <li>
+        <a id="carousel-selector-<%= n %>" class="selectors <%= "selected" if n == 0 %>">
+          <%= image_tag photo.square75.source_url, class: "thumbnail-img" %>
+          <% n += 1 %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</div>

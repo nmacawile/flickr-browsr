@@ -1,0 +1,17 @@
+<div class="carousel-inner" role="listbox">
+  <% n = 0 %>
+  <% @photos.each do |photo| %>
+    <div class="item <%= "active" if n == 0 %>" data-slide-number="<%= n %>">
+      <a href="<%= photo.url %>" target="_blank">
+        <%= image_tag photo.medium500!.source_url, class: "carousel-image" %>
+      </a>
+      <div class="carousel-caption">
+        <h5><%= photo.title %></h5>
+      </div>
+    </div>
+    <% n += 1 %>
+  <% end %>
+
+  <!-- Left and right controls -->
+  <%= render "carousel_nav" %>
+</div>
